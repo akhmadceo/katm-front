@@ -1,0 +1,36 @@
+{
+  "name": "create-react-app",
+  "version": "4.0.0",
+  "private": true,
+  "proxy": "https://api.livegram.uz:9092",
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
+  },
+  "dependencies": {
+    "@material-ui/core": "latest",
+    "axios": "^0.21.0",
+    "clsx": "latest",
+    "formik": "^2.1.5",
+    "moment": "^2.28.0",
+    "react": "latest",
+    "react-content-loader": "^5.1.1",
+    "react-dom": "latest",
+    "react-input-mask": "^2.0.4",
+    "react-scripts": "latest"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  }
+}

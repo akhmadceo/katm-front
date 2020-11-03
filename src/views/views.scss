@@ -1,0 +1,316 @@
+.blocks {
+  display: grid;
+  grid-template-columns: 1fr 444px;
+  grid-column-gap: 20px;
+  transition: width 2s;
+
+  &.middle {
+    grid-template-columns: 1.5fr 2fr;
+  }
+
+  &.opened {
+    grid-template-columns: 1fr;
+    transition: width 2s;
+  }
+
+  .block__header {
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    h2 {
+      font-size: 16px;
+
+      span {
+        color: #DD8A3E;
+      }
+    }
+  }
+
+  .block {
+    padding: 20px;
+    background-color: #fff;
+    border: 1px solid rgba(218, 223, 231, 0.8);
+    box-sizing: border-box;
+    border-radius: 6px;
+    margin-bottom: 20px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+
+    .userCard {
+      background: #f4f4f4;
+      box-shadow: inset 0px 0px 10px rgba(0, 0, 0, 0.08);
+      border-radius: 6px;
+      padding: 20px 28px;
+      cursor: pointer;
+      transition: all 0.2s ease-in-out;
+      position: relative;
+      margin-bottom: 10px;
+
+      .iconProfile {
+        width: 32px;
+        height: 32px;
+        background: #c4c4c4;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: absolute;
+        bottom: 20px;
+        right: 28px;
+
+        svg {
+          fill: #fff;
+        }
+      }
+
+      &:hover {
+        background: #ffffff;
+        box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.12);
+        transform: scale(1.15);
+      }
+
+      ul {
+        display: inline-block;
+        padding: 0;
+        margin: 0;
+        list-style: none;
+        font-size: 14px;
+        line-height: 17px;
+        color: #212529;
+
+        &:first-child {
+          margin-right: 14px;
+          padding-right: 14px;
+          font-weight: 500;
+          border-right: 1px solid rgba(218, 223, 231, 0.8);
+        }
+
+        li {
+          margin-bottom: 20px;
+          max-width: 230px;
+          text-overflow: ellipsis;
+          white-space: nowrap;
+          overflow: hidden;
+
+          &:last-child {
+            margin-bottom: 0;
+          }
+        }
+      }
+    }
+  }
+
+  .blocks__left {
+    transition: width 2s;
+    .block {
+      padding: 20px;
+      background-color: #fff;
+      border: 1px solid rgba(218, 223, 231, 0.8);
+      box-sizing: border-box;
+      border-radius: 6px;
+
+      &.bottom {
+        padding-right: 10px;
+      }
+
+      /* Let's get this party started */
+      ::-webkit-scrollbar {
+        width: 4px;
+      }
+
+      /* Track */
+      ::-webkit-scrollbar-track {
+        -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+        -webkit-border-radius: 10px;
+        border-radius: 10px;
+      }
+
+      /* Handle */
+      ::-webkit-scrollbar-thumb {
+        -webkit-border-radius: 10px;
+        border-radius: 10px;
+        background: #212529;
+        -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.5);
+      }
+      ::-webkit-scrollbar-thumb:window-inactive {
+        background: #212529;
+      }
+
+      &__inner {
+        height: calc(100vh - 530px);
+        overflow-y: auto;
+        padding-right: 10px;
+      }
+
+      form {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-gap: 20px;
+
+        div {
+          &.formTitle {
+            font-size: 16px;
+            color: #494949;
+
+            span {
+              color: #dd8a3e;
+              margin: 0 14px;
+            }
+          }
+          &.formButtons {
+            display: flex !important;
+            margin-top: 0 !important;
+            grid-column: 1 / -1 !important;
+          }
+          &.fullWidth {
+            grid-column: 1 / -1;
+          }
+          &.unFullWidth {
+            grid-column: auto;
+          }
+        }
+
+        div:nth-child(8) {
+          grid-column: 1 / -1;
+          display: grid;
+          grid-template-columns: 1fr 1fr;
+          grid-column-gap: 20px;
+          margin-top: 20px;
+
+          div {
+            .title {
+              margin-bottom: 10px;
+              font-weight: 500;
+              color: #494949;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .blocks__right {
+    transition: width 0.4s;
+
+    .block {
+      .infoTotal {
+        position: relative;
+        border: 1px solid #e3e3e3;
+        border-radius: 8px;
+
+        box-shadow: 0px 0px 37px -9px rgba(0, 0, 0, 0.14);
+
+        span {
+          position: absolute;
+          top: 0;
+          left: 180px;
+          width: 1px;
+          height: 100%;
+          background-color: #e3e3e3;
+        }
+
+        .infoTotalAmount {
+          display: flex;
+          border-bottom: 1px solid #e3e3e3;
+          padding: 12px 38px;
+
+          .infoTitle {
+            width: 200px;
+          }
+
+          .infoTotalSum {
+            &.green {
+              color: #00c17c;
+            }
+
+            &.red {
+              color: red;
+            }
+          }
+
+          &:last-child {
+            border-bottom: none;
+          }
+        }
+      }
+
+      .total {
+        position: relative;
+      }
+      /* Let's get this party started */
+      ::-webkit-scrollbar {
+        width: 4px;
+      }
+
+      /* Track */
+      ::-webkit-scrollbar-track {
+        -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+        -webkit-border-radius: 10px;
+        border-radius: 10px;
+      }
+
+      /* Handle */
+      ::-webkit-scrollbar-thumb {
+        -webkit-border-radius: 10px;
+        border-radius: 10px;
+        background: #212529;
+        -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.5);
+      }
+      ::-webkit-scrollbar-thumb:window-inactive {
+        background: #212529;
+      }
+
+      &__inner {
+        height: calc(100vh - 530px);
+        overflow-y: auto;
+        padding-right: 5px;
+        padding-left: 5px;
+        padding-bottom: 46px;
+
+  
+
+        &.noscroll {
+          overflow-y: hidden !important;
+        }
+      }
+    }
+  }
+}
+
+.blockMax {
+  height: calc(100vh - 418px) !important;
+}
+
+.fullHeight {
+  height: calc(100vh - 166px) !important;
+}
+.maxHeight {
+  height: calc(100vh - 300px) !important;
+}
+
+.totalAmount {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  border-radius: 6px;
+  font-size: 14px;
+  font-weight: 500;
+  padding: 12px 28px;
+  color: #fff;
+  background-color: #212529;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+
+  .title {
+    width: 140px;
+  }
+  .totalSum {
+    width: 36%;
+    text-align: center;
+  }
+}

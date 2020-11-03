@@ -1,0 +1,33 @@
+.container {
+  background-color: #f4f4f4;
+  margin-bottom: 10px;
+  border-radius: 6px;
+
+  .title {
+    text-align: center;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    padding: 12px 0;
+    border-bottom: 1px solid #dadfe7;
+  }
+
+  .list {
+    list-style: none;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    padding: 0;
+    margin: 0;
+    
+
+    li {
+      text-align: center;
+      padding: 10px 0;
+      border-right: 1px solid #dadfe7;
+    }
+
+    :last-child {
+        border-right: none;
+      }
+  }
+}

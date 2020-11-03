@@ -1,0 +1,44 @@
+.container {
+  position: relative;
+  .title {
+    font-size: 16px;
+    font-weight: bold;
+    color: #2f2f2f;
+
+    span {
+      color: #dd8a3e;
+    }
+  }
+
+  .list {
+    list-style: none;
+    padding: 0;
+    color: #212529;
+
+    li {
+        display: grid;
+        grid-template-columns: 1fr 4fr;
+        span {
+            font-weight: bold;
+        }
+    }
+  }
+
+  .iconProfile {
+    width: 32px;
+    height: 32px;
+    background: #c4c4c4;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 20px;
+
+    svg {
+      fill: #fff;
+    }
+  }
+}

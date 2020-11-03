@@ -1,0 +1,49 @@
+.clientInfoTable {
+  &__header {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 10px;
+      text-align: center;
+      background-color: #212529;
+      color: #fff;
+      border-radius: 8px;
+  }
+  &__body {
+     
+      &-item {
+          display: flex;
+          border: 1px solid #E3E3E3;
+          padding: 12px 20px;
+          border-top: none;
+          position: relative;
+          
+
+          &:first-child {
+            border-top-left-radius: 6px;
+            border-top-right-radius: 6px;
+          }
+          &:last-child {
+            border-bottom-left-radius: 6px;
+            border-bottom-right-radius: 6px;
+          }
+
+          .item__label {
+              text-transform: uppercase;
+            color: #212529;
+            width: 140px;
+            margin-right: 38px;
+          }
+
+          .item__value::before {
+            content: "";
+            width: 1px;
+            height: 100%;
+            top: 0;
+            left: 140px;
+            position: absolute;
+            background: #E3E3E3;
+          }
+      }
+  }
+}
