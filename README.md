@@ -1,4 +1,4 @@
-# Create React App example
+# KATM FRONTEND
 
 ## How to use
 
